@@ -1,0 +1,23 @@
+<h1>Hello {{title}}</h1>
+<p *ngIf="(showType==1)">{{surname}}</p>
+<p *ngIf="(showType==2)">{{title}}</p>
+
+<table>
+   <thead>
+       <th>Serial</th>
+       <th>Movie</th>
+   </thead> 
+   
+   <tbody>
+        <tr *ngFor="let name of nameValues">
+            <td>{{ name.serial}}</td>
+            <td>{{ name.movie}}</td>
+        </tr>
+        <tr *ngIf="!nameValues || nameValues.length == 0">
+            <td colspan="2">No Data Found</td>
+        </tr>
+   </tbody>
+   
+</table>
+
+<app-office></app-office>
